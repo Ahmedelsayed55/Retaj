@@ -4,93 +4,37 @@ import imag2 from '../../assets/ta5f.jpg'
 
 const drySweets = [
   {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
+    id: 301,
+    name: "حلويات جافة",
+    image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
+    id: 302,
+    name: "حلويات جافة",
+    image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 2,
+    id: 303,
     name: "حلويات جافة",
     image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 2,
-    name: "حلويات جافة",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 2,
+    id: 304,
     name: "حلويات جافة",
     image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 2,
+    id: 305,
     name: "حلويات جافة",
     image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 2,
-    name: "حلويات جافة",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 2,
-    name: "حلويات جافة",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   }
@@ -98,12 +42,14 @@ const drySweets = [
 
 const Dry = () => {
   return (
-    <div className="western-container">
-      <div className="western-grid">
+    <div className="container">
+      <div className="product-grid">
         {drySweets.map((sweet) => (
-          <div key={sweet.id} className="western-card">
-            <img src={sweet.image} alt={sweet.name} />
-            <div className="content">
+          <div key={sweet.id} className="product-card">
+            <div className="image-container">
+              <img src={sweet.image} alt={sweet.name} />
+            </div>
+            <div className="product-info">
               <h3>{sweet.name}</h3>
               <p className="desc">{sweet.desc}</p>
               <p className="price">{sweet.price} جنيه</p>
@@ -112,7 +58,7 @@ const Dry = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dry
+export default Dry;

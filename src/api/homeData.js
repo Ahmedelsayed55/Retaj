@@ -100,6 +100,120 @@ export const bestSellers = [
   }
 ];
 
+export const orientalSweets = [
+  {
+    id: 101,
+    name: "كنافة بالمكسرات",
+    image: img1,
+    price: 48.00,
+    desc: "كنافة طازجة محشوة بالمكسرات"
+  },
+  {
+    id: 102,
+    name: "بقلاوة بالفستق",
+    image: img1,
+    price: 42.00,
+    desc: "بقلاوة محشوة بالفستق الحلبي"
+  },
+  {
+    id: 103,
+    name: "عش البلبل",
+    image: img1,
+    price: 38.00,
+    desc: "عش البلبل بالقشطة والفستق"
+  },
+  {
+    id: 104,
+    name: "زنود الست",
+    image: img1,
+    price: 35.00,
+    desc: "زنود الست بالقشطة"
+  },
+  {
+    id: 105,
+    name: "بسبوسة",
+    image: img1,
+    price: 30.00,
+    desc: "بسبوسة بالقشطة"
+  }
+];
+
+export const westernSweets = [
+  {
+    id: 201,
+    name: "تشيز كيك التوت",
+    image: img2,
+    price: 55.00,
+    desc: "تشيز كيك بالتوت الطازج"
+  },
+  {
+    id: 202,
+    name: "تارت الشوكولاتة",
+    image: img2,
+    price: 45.00,
+    desc: "تارت محشو بالشوكولاتة البلجيكي"
+  },
+  {
+    id: 203,
+    name: "ميني كب كيك",
+    image: img2,
+    price: 35.00,
+    desc: "تشكيلة مميزة من الميني كب كيك"
+  },
+  {
+    id: 204,
+    name: "براونيز",
+    image: img2,
+    price: 40.00,
+    desc: "براونيز بالشوكولاتة"
+  },
+  {
+    id: 205,
+    name: "كريب",
+    image: img2,
+    price: 42.00,
+    desc: "كريب بالشوكولاتة والموز"
+  }
+];
+
+export const drySweets = [
+  {
+    id: 301,
+    name: "بسكويت باللوز",
+    image: img1,
+    price: 45.00,
+    desc: "بسكويت محشو باللوز"
+  },
+  {
+    id: 302,
+    name: "معمول بالتمر",
+    image: img1,
+    price: 40.00,
+    desc: "معمول محشو بالتمر"
+  },
+  {
+    id: 303,
+    name: "غريبة",
+    image: img1,
+    price: 35.00,
+    desc: "غريبة بالمكسرات"
+  },
+  {
+    id: 304,
+    name: "كحك العيد",
+    image: img1,
+    price: 38.00,
+    desc: "كحك العيد بالملبن"
+  },
+  {
+    id: 305,
+    name: "بيتي فور",
+    image: img1,
+    price: 42.00,
+    desc: "بيتي فور متنوع"
+  }
+];
+
 export const newProducts = [
   {
     id: 1,

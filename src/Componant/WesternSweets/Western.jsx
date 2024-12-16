@@ -4,107 +4,52 @@ import imag2 from '../../assets/ta5f.jpg'
 
 const westernSweets = [
   {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
+    id: 201,
+    name: "حلويات غربية",
+    image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 2,
-    name: "تخفيضات",
-    image: imag2,
+    id: 202,
+    name: "حلويات غربية",
+    image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 3,
-    name: "حلويات جافة",
+    id: 203,
+    name: "حلويات غربية",
     image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 4,
-    name: "حلويات جافة",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 5,
-    name: "تخفيضات",
-    image: imag2,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 6,
-    name: "حلويات جافة",
+    id: 204,
+    name: "حلويات غربية",
     image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 7,
-    name: "تخفيضات",
-    image: imag2,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 8,
-    name: "حلويات جافة",
+    id: 205,
+    name: "حلويات غربية",
     image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 9,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 10,
-    name: "حلويات جافة",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 11,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 12,
-    name: "حلويات جافة",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 200
-  },
-  {
-    id: 13,
-    name: "تخفيضات",
-    image: imag2,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   }
-  // يمكنك إضافة المزيد من المنتجات هنا
 ];
 
 const Western = () => {
   return (
-    <div className="western-container">
-      <div className="western-grid">
+    <div className="container">
+      <div className="product-grid">
         {westernSweets.map((sweet) => (
-          <div key={sweet.id} className="western-card">
-            <img src={sweet.image} alt={sweet.name} />
-            <div className="content">
+          <div key={sweet.id} className="product-card">
+            <div className="image-container">
+              <img src={sweet.image} alt={sweet.name} />
+            </div>
+            <div className="product-info">
               <h3>{sweet.name}</h3>
               <p className="desc">{sweet.desc}</p>
               <p className="price">{sweet.price} جنيه</p>
@@ -112,9 +57,8 @@ const Western = () => {
           </div>
         ))}
       </div>
-    
     </div>
-  )
-}
+  );
+};
 
-export default Western
+export default Western;

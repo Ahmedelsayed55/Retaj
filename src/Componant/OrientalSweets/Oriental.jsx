@@ -4,155 +4,52 @@ import imag2 from '../../assets/ta5f.jpg'
 
 const orientalSweets = [
   {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 1,
-    name: "تخفيضات",
-    image: imag2,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 2,
+    id: 101,
     name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
-    price: 200
+    price: 150
+  },
+  {
+    id: 102,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 103,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 104,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 105,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
   }
 ];
 
 const Oriental = () => {
   return (
-    <div className="oriental-container">
-      <div className="oriental-grid">
+    <div className="container">
+      <div className="product-grid">
         {orientalSweets.map((sweet) => (
-          <div key={sweet.id} className="oriental-card">
-            <img src={sweet.image} alt={sweet.name} />
-            <div className="content">
+          <div key={sweet.id} className="product-card">
+            <div className="image-container">
+              <img src={sweet.image} alt={sweet.name} />
+            </div>
+            <div className="product-info">
               <h3>{sweet.name}</h3>
               <p className="desc">{sweet.desc}</p>
               <p className="price">{sweet.price} جنيه</p>
@@ -161,7 +58,7 @@ const Oriental = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Oriental
+export default Oriental;
