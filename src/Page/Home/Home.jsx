@@ -154,6 +154,51 @@ const Home = () => {
         </div>
       </div>
 
+      {/* /////////////////////////////////// */}
+      {/* /////////////////////////////////// */}
+      <div className="best-selling">
+      <div className="container">
+          <h2>الجديد</h2>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            modules={[Navigation]}
+            className="mySwiper"
+            breakpoints={{
+              320: { // للأجهزة الصغيرة مثل الهواتف
+                slidesPerView: 2, // عرض 2 شريحة
+              },
+              768: { // للأجهزة اللوحية والشاشات المتوسطة
+                slidesPerView: 3, // عرض 3 شرائح
+              },
+              1024: { // لأجهزة الكمبيوتر والشاشات الكبيرة
+                slidesPerView: 4, // عرض 4 شرائح
+              },
+            }}
+          >
+            {bestSellers.map((product) => (
+              <SwiperSlide key={product.id}>
+                <div className="product-card">
+                  <img src={product.image} alt={product.name} />
+                  <h3>{product.name}</h3>
+                  <p className="price">{product.price.toFixed(2)} ج.م</p>
+                  <div className="card-actions">
+                    <button className="heart-btn"><i className="far fa-heart"></i></button>
+                    <button className="cart-btn"><i className="fas fa-shopping-cart"></i></button>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
+        </div>
+      </div>
+
     </div>
   );
 };

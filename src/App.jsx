@@ -11,7 +11,6 @@ import NavBar from "./Componant/NavBar/NavBar";
 import Footer from "./Componant/Footer/Footer";
 import Home from "./Page/Home/Home";
 import About from "./Page/About/About";
-import StartPage from "./Page/Startpage/StartPage";
 import Oriental from "./Componant/OrientalSweets/Oriental";
 import Western from "./Componant/WesternSweets/Western";
 import Contact from "./Componant/Contact/Contact";

@@ -6,7 +6,6 @@
     top: 0;
     z-index: 1000;
     border-bottom: 2px solid rgba(255, 215, 0, 0.5);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -15,7 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
     flex-wrap: wrap;
 }
 
@@ -148,7 +146,7 @@
     }
 
     .contact-btn {
-        padding: 10px 20px;
+        padding: 8px 16px;
         font-size: 1rem;
     }
 
@@ -159,10 +157,9 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .header {
+    .header{
         position: sticky;
         top: 0;
-        z-index: 9999;
     }
     .navbar {
         padding: 0.8rem 2rem;
@@ -170,13 +167,7 @@
     .navbar .links {
         gap: 2rem;
     }
-
     .navbar .links a {
-        font-size: 1.1rem;
-    }
-
-    .contact-btn {
-        padding: 12px 24px;
         font-size: 1.1rem;
     }
 }

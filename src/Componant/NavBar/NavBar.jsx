@@ -18,7 +18,7 @@ const NavBar = () => {
           <NavLink to="/oriental">شرقي</NavLink>
           <NavLink to="/dry">نواشف</NavLink>
           <NavLink to="/about">تفاصيل عنا</NavLink>
-          <NavLink to="/home">الصفحه الرئيسيه</NavLink>
+          <NavLink to="/">الصفحه الرئيسيه</NavLink>
           <NavLink to="/contact">
             <button className="contact-btn"><FaPhone /></button>
           </NavLink>
