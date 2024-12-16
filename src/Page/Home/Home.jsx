@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Autoplay, Navigation, EffectFade } from "swiper/modules";
 import { Link } from "react-router-dom";
-import { mainSliderData, featuredProducts, bestSellers } from "../../api/homeData";
+import { mainSliderData, featuredProducts, bestSellers, newProducts } from "../../api/homeData";
 
 const Home = () => {
   return (
@@ -154,48 +154,45 @@ const Home = () => {
         </div>
       </div>
 
-      {/* /////////////////////////////////// */}
-      {/* /////////////////////////////////// */}
-      <div className="best-selling">
-      <div className="container">
+      <div className="new-products">
+        <div className="container">
           <h2>الجديد</h2>
           <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }}
+            slidesPerView={1}
+            spaceBetween={10}
+            navigation={true}
             modules={[Navigation]}
             className="mySwiper"
             breakpoints={{
-              320: { // للأجهزة الصغيرة مثل الهواتف
-                slidesPerView: 2, // عرض 2 شريحة
+              640: {
+                slidesPerView: 2,
               },
-              768: { // للأجهزة اللوحية والشاشات المتوسطة
-                slidesPerView: 3, // عرض 3 شرائح
+              768: {
+                slidesPerView: 3,
               },
-              1024: { // لأجهزة الكمبيوتر والشاشات الكبيرة
-                slidesPerView: 4, // عرض 4 شرائح
+              1024: {
+                slidesPerView: 4,
               },
             }}
           >
-            {bestSellers.map((product) => (
+            {newProducts.map((product) => (
               <SwiperSlide key={product.id}>
                 <div className="product-card">
                   <img src={product.image} alt={product.name} />
                   <h3>{product.name}</h3>
-                  <p className="price">{product.price.toFixed(2)} ج.م</p>
+                  <p className="price">{product.price} ج.م</p>
                   <div className="card-actions">
-                    <button className="heart-btn"><i className="far fa-heart"></i></button>
-                    <button className="cart-btn"><i className="fas fa-shopping-cart"></i></button>
+                    <button>
+                      <i className="fas fa-heart"></i>
+                    </button>
+                    <button>
+                      <i className="fas fa-shopping-cart"></i>
+                    </button>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-button-next"></div>
-          <div className="swiper-button-prev"></div>
         </div>
       </div>
 

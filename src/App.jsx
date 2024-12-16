@@ -12,6 +12,7 @@ import Footer from "./Componant/Footer/Footer";
 import Home from "./Page/Home/Home";
 import About from "./Page/About/About";
 import Oriental from "./Componant/OrientalSweets/Oriental";
+// import StartPage from "./Page/StartPage/StartPage";
 import Western from "./Componant/WesternSweets/Western";
 import Contact from "./Componant/Contact/Contact";
 import Dry from "./Componant/Dry/Dry";
@@ -31,13 +32,14 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route path="/" element={layout()}>
-          {/* <Route index element={<StartPage />} ></Route> */}
+          
           <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/oriental" element={<Oriental />}></Route>
           <Route path="/western" element={<Western />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/dry" element={<Dry />}></Route>
+          {/* <Route path="/startpage" element={<StartPage />} ></Route> */}
         </Route>
       </Route>
     )

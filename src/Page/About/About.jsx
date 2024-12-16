@@ -6,13 +6,11 @@ const About = () => {
     <div className="about-container">
       <div className="about-header">
         <h1>مرحباً بكم في مصنع ريتاج</h1>
-        <p>حيث نصنع الحلويات بحب وإبداع منذ عام 2010</p>
+        <p>ريتاج من القلب للقلب</p>
       </div>
 
       <div className="about-content">
-        <div className="about-image">
-          <img src="" alt="مصنع ريتاج للحلويات" />
-        </div>
+        
         
         <div className="about-text">
           <h2>قصتنا</h2>

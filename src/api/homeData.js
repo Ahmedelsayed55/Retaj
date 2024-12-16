@@ -43,16 +43,16 @@ export const featuredProducts = [
   },
   {
     id: 5,
-    name: "منتج رابع",
+    name: "منتج خامس",
     image: img2,
     price: 35.00
   },
   {
     id: 6,
-    name: "منتج ثالث",
+    name: "منتج سادس",
     image: img1,
     price: 40.00
-  },
+  }
 ];
 
 export const bestSellers = [
@@ -60,36 +60,87 @@ export const bestSellers = [
     id: 1,
     name: "منتج شائع 1",
     image: img1,
-    price: 45.00
+    price: 45.00,
+    description: "تشكيلة مميزة من الحلويات الشرقية"
   },
   {
     id: 2,
     name: "منتج شائع 2",
     image: img2,
-    price: 38.00
+    price: 38.00,
+    description: "أشهى الحلويات الغربية"
   },
   {
     id: 3,
     name: "منتج شائع 3",
     image: img1,
-    price: 42.00
+    price: 42.00,
+    description: "تشكيلة متنوعة من النواشف"
   },
   {
     id: 4,
     name: "منتج شائع 4",
     image: img2,
-    price: 36.00
+    price: 36.00,
+    description: "عروض خاصة على منتجاتنا"
   },
   {
     id: 5,
-    name: "منتج شائع 3",
+    name: "منتج شائع 5",
     image: img1,
-    price: 42.00
+    price: 42.00,
+    description: "تشكيلة متنوعة من الحلويات"
   },
   {
     id: 6,
-    name: "منتج شائع 4",
+    name: "منتج شائع 6",
     image: img2,
-    price: 36.00
+    price: 36.00,
+    description: "منتجات مميزة"
+  }
+];
+
+export const newProducts = [
+  {
+    id: 1,
+    name: "كنافة بالمكسرات",
+    image: img1,
+    price: 48.00,
+    description: "كنافة طازجة محشوة بالمكسرات"
+  },
+  {
+    id: 2,
+    name: "تشيز كيك التوت",
+    image: img2,
+    price: 55.00,
+    description: "تشيز كيك بالتوت الطازج"
+  },
+  {
+    id: 3,
+    name: "بقلاوة بالفستق",
+    image: img1,
+    price: 42.00,
+    description: "بقلاوة محشوة بالفستق الحلبي"
+  },
+  {
+    id: 4,
+    name: "تارت الشوكولاتة",
+    image: img2,
+    price: 45.00,
+    description: "تارت محشو بالشوكولاتة البلجيكي"
+  },
+  {
+    id: 5,
+    name: "عش البلبل",
+    image: img1,
+    price: 38.00,
+    description: "عش البلبل بالقشطة والفستق"
+  },
+  {
+    id: 6,
+    name: "ميني كب كيك",
+    image: img2,
+    price: 35.00,
+    description: "تشكيلة مميزة من الميني كب كيك"
   }
 ];

@@ -98,14 +98,16 @@ const drySweets = [
 
 const Dry = () => {
   return (
-    <div className="dry-container">
-      <div className="dry-grid">
+    <div className="western-container">
+      <div className="western-grid">
         {drySweets.map((sweet) => (
-          <div key={sweet.id} className="dry-card">
+          <div key={sweet.id} className="western-card">
             <img src={sweet.image} alt={sweet.name} />
-            <h3>{sweet.name}</h3>
-            <p className="desc">{sweet.desc}</p>
-            <p className="price">{sweet.price} جنيه</p>
+            <div className="content">
+              <h3>{sweet.name}</h3>
+              <p className="desc">{sweet.desc}</p>
+              <p className="price">{sweet.price} جنيه</p>
+            </div>
           </div>
         ))}
       </div>

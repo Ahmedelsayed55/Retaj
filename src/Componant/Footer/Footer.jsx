@@ -40,6 +40,7 @@ const Footer = () => {
           <ul className="quick-links">
             <li><Link to="/about">تفاصيل عنا</Link></li>
             <li><Link to="/contact">تواصل معنا</Link></li>
+            {/* <li><Link to="/startpage">اراء عملاءنا </Link></li> */}
             <div className="contact-item">
               <FaFacebook className="contact-icon" />
               <a href="https://www.facebook.com/retajpastry?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
