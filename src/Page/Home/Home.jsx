@@ -34,8 +34,8 @@ const Home = () => {
               <div className="slide-content">
                 <img src={slide.image} alt={slide.title} />
                 <div className="slide-overlay">
-                  <h2>{slide.title}</h2>
-                  <p>{slide.description}</p>
+                  {/* <h2>{slide.title}</h2>
+                  <p>{slide.description}</p> */}
                 </div>
               </div>
             </SwiperSlide>

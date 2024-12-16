@@ -32,8 +32,8 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route path="/" element={layout()}>
-          <Route index element={<StartPage />} ></Route>
-          <Route path="/home" element={<Home />}></Route>
+          {/* <Route index element={<StartPage />} ></Route> */}
+          <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/oriental" element={<Oriental />}></Route>
           <Route path="/western" element={<Western />}></Route>
