@@ -3,41 +3,111 @@ import imag1 from '../../assets/301874856_460227866149274_9104408851150480673_n.
 import imag2 from '../../assets/ta5f.jpg'
 
 const drySweets = [
-  {
-    id: 301,
-    name: "حلويات جافة",
+ {
+    id: 1,
+    name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 302,
-    name: "حلويات جافة",
+    id: 2,
+    name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 303,
-    name: "حلويات جافة",
+    id: 3,
+    name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 304,
-    name: "حلويات جافة",
+    id: 4,
+    name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 305,
-    name: "حلويات جافة",
+    id: 5,
+    name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
-  }
+  },
+  {
+    id: 6,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 7,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 8,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 9,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 10,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 11,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 12,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 13,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id:14,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 15,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
 ];
 
 const Dry = () => {

@@ -3,41 +3,112 @@ import imag1 from '../../assets/301874856_460227866149274_9104408851150480673_n.
 import imag2 from '../../assets/ta5f.jpg'
 
 const westernSweets = [
-  {
-    id: 201,
-    name: "حلويات غربية",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 202,
-    name: "حلويات غربية",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 203,
-    name: "حلويات غربية",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 204,
-    name: "حلويات غربية",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  },
-  {
-    id: 205,
-    name: "حلويات غربية",
-    image: imag1,
-    desc: "الوصف الخاص بالمنتج",
-    price: 150
-  }
+  
+    {
+       id: 1,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 2,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 3,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 4,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 5,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 6,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 7,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 8,
+       name: "حلويات شرقية",
+       image: imag1,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 9,
+       name: "حلويات شرقية",
+       image: imag2,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 10,
+       name: "حلويات شرقية",
+       image: imag2,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 11,
+       name: "حلويات شرقية",
+       image: imag2,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 12,
+       name: "حلويات شرقية",
+       image: imag2,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 13,
+       name: "حلويات شرقية",
+       image: imag2,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id:14,
+       name: "حلويات شرقية",
+       image: imag2,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
+     {
+       id: 15,
+       name: "حلويات شرقية",
+       image: imag2,
+       desc: "الوصف الخاص بالمنتج",
+       price: 150
+     },
 ];
 
 const Western = () => {

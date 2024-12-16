@@ -4,40 +4,110 @@ import imag2 from '../../assets/ta5f.jpg'
 
 const orientalSweets = [
   {
-    id: 101,
+    id: 1,
     name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 102,
+    id: 2,
     name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 103,
+    id: 3,
     name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 104,
+    id: 4,
     name: "حلويات شرقية",
     image: imag1,
     desc: "الوصف الخاص بالمنتج",
     price: 150
   },
   {
-    id: 105,
+    id: 5,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 6,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 7,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 8,
+    name: "حلويات شرقية",
+    image: imag1,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 9,
     name: "حلويات شرقية",
     image: imag2,
     desc: "الوصف الخاص بالمنتج",
     price: 150
-  }
+  },
+  {
+    id: 10,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 11,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 12,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 13,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id:14,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
+  {
+    id: 15,
+    name: "حلويات شرقية",
+    image: imag2,
+    desc: "الوصف الخاص بالمنتج",
+    price: 150
+  },
 ];
 
 const Oriental = () => {
