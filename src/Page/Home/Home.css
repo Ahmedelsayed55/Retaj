@@ -3,15 +3,17 @@
 
 
 .slider {
-    width: 100%;
-    height: 85vh;
+    width: 90%;
+    height: 65vh;
+    margin: auto;
     overflow: hidden;
     position: relative;
+    margin-bottom: -40px;
 }
 
 .main-slider {
     width: 100%;
-    /* height: 100% !important; */
+    height: 80%;
     aspect-ratio: 16/9;
 }
 
@@ -25,40 +27,56 @@
 .slide-content img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
 }
 
 /* تأثير الاختفاء المحسن */
-.swiper-fade .swiper-slide {
-    opacity: 0 !important;
-    transition: opacity 1.5s ease-in-out !important;
+.swiper-slide-active .slide-content img {
+    animation: zoomIn 1s ease forwards;
 }
 
-.swiper-fade .swiper-slide-active {
-    opacity: 1 !important;
+@keyframes zoomIn {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 /* التجاوب مع الشاشات المختلفة */
 @media screen and (max-width: 480px) {
     .slider {
-        height: 40vh;
+        height: 30vh;
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .slider {
-        height: 50vh;
+        height: 40vh;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .slider {
-        height: 60vh;
+        height: 50vh;
     }
 }
 
 /* featured product*/
+
+.home {
+  min-height: 100vh;
+  direction: rtl;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
 
 .home .container {
     max-width: 1200px;
@@ -156,6 +174,8 @@
     height: auto;
     display: flex;
 }
+
+
 
 .mySwiper {
     padding: 20px 10px !important;
@@ -416,4 +436,195 @@
 * {
     scrollbar-width: thin;
     scrollbar-color: #ffd3e0 #f1f1f1;
+}
+
+/* تنسيق العناوين */
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #D4AF37;
+  margin: 0.5rem auto;
+}
+
+/* تنسيق المنتجات */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.badge.new {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.badge.bestseller {
+  background-color: #D4AF37;
+  color: white;
+}
+
+.product-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: #D4AF37;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.details-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #B4941F;
+}
+
+/* تنسيق شبكة المنتجات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* تنسيق سلايدر المنتجات */
+.products-slider {
+  padding: 1rem 0 3rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #D4AF37;
+}
+
+/* تنسيق زر التسوق */
+.shop-now {
+  padding: 0.75rem 2rem;
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.shop-now:hover {
+  background-color: #B4941F;
+  transform: translateY(-2px);
+}
+
+/* تنسيق حالات التحميل والخطأ */
+.loading, .error {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* التجاوب مع الشاشات المختلفة */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-item.large {
+    grid-column: auto;
+    height: 300px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slide-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .slide-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slider {
+    height: 50vh;
+  }
+
+  .slide-overlay h2 {
+    font-size: 1.5rem;
+  }
 }

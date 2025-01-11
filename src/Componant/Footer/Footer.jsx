@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>الأقسام</h3>
           <ul className="categories-list">
-            <li><Link to="/eastern">حلويات شرقي</Link></li>
+            <li><Link to="/oriental">حلويات شرقي</Link></li>
             <li><Link to="/western">حلويات غربي</Link></li>
             <li><Link to="/dry">نواشف</Link></li>
           </ul>

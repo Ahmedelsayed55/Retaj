@@ -1,55 +1,60 @@
 import "./App.css";
-// eslint-disable-next-line no-unused-vars
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Outlet,
   RouterProvider,
   Route,
+  useLocation,
 } from "react-router-dom";
+import { useEffect } from "react";
 import NavBar from "./Componant/NavBar/NavBar";
 import Footer from "./Componant/Footer/Footer";
 import Home from "./Page/Home/Home";
 import About from "./Page/About/About";
 import Oriental from "./Componant/OrientalSweets/Oriental";
-// import StartPage from "./Page/StartPage/StartPage";
 import Western from "./Componant/WesternSweets/Western";
 import Contact from "./Componant/Contact/Contact";
 import Dry from "./Componant/Dry/Dry";
+import ProductDetails from "./Page/ProductDetails/ProductDetails";
 
-const layout = () => {
+const Layout = () => {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [pathname]);
+
   return (
     <>
       <NavBar />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );
 };
 
-function App() {
+const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route>
-        <Route path="/" element={layout()}>
-          
-          <Route index element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/oriental" element={<Oriental />}></Route>
-          <Route path="/western" element={<Western />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/dry" element={<Dry />}></Route>
-          {/* <Route path="/startpage" element={<StartPage />} ></Route> */}
-        </Route>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="oriental" element={<Oriental />} />
+        <Route path="western" element={<Western />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="dry" element={<Dry />} />
+        <Route path="product/:id" element={<ProductDetails />} />
       </Route>
     )
   );
 
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
-}
+  return <RouterProvider router={router} />;
+};
 
 export default App;

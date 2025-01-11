@@ -1,129 +1,60 @@
-import './Western.css'
-import imag1 from '../../assets/301874856_460227866149274_9104408851150480673_n.jpg'
-import imag2 from '../../assets/ta5f.jpg'
-
-const westernSweets = [
-  
-    {
-       id: 1,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 2,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 3,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 4,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 5,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 6,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 7,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 8,
-       name: "حلويات شرقية",
-       image: imag1,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 9,
-       name: "حلويات شرقية",
-       image: imag2,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 10,
-       name: "حلويات شرقية",
-       image: imag2,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 11,
-       name: "حلويات شرقية",
-       image: imag2,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 12,
-       name: "حلويات شرقية",
-       image: imag2,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 13,
-       name: "حلويات شرقية",
-       image: imag2,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id:14,
-       name: "حلويات شرقية",
-       image: imag2,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-     {
-       id: 15,
-       name: "حلويات شرقية",
-       image: imag2,
-       desc: "الوصف الخاص بالمنتج",
-       price: 150
-     },
-];
+import { useState, useEffect } from 'react'
+import '../Dry/Dry.css'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Western = () => {
+  const [westernSweets, setWesternSweets] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchWesternSweets = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get('http://localhost:4000/api/product/list?category=Western');
+        if (response.data.success) {
+          setWesternSweets(response.data.products);
+        } else {
+          setError('Failed to fetch products');
+        }
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchWesternSweets();
+  }, []);
+
+  const handleDetailsClick = (productId) => {
+    navigate(`/product/${productId}`);
+  };
+
+  if (loading) return <div className="loading">جاري التحميل...</div>;
+  if (error) return <div className="error">{error}</div>;
+
   return (
-    <div className="container">
-      <div className="product-grid">
-        {westernSweets.map((sweet) => (
-          <div key={sweet.id} className="product-card">
-            <div className="image-container">
-              <img src={sweet.image} alt={sweet.name} />
-            </div>
-            <div className="product-info">
-              <h3>{sweet.name}</h3>
-              <p className="desc">{sweet.desc}</p>
-              <p className="price">{sweet.price} جنيه</p>
+    <div className="dry-container">
+      <div className="dry-grid">
+        {westernSweets.map((product) => (
+          <div key={product._id} className="product-card">
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              className="product-image"
+            />
+            <h3 className="product-name">{product.name}</h3>
+            <p className="product-price">{product.price.toFixed(2)} ج.م</p>
+            <div className="product-actions">
+              <button 
+                className="details-button"
+                onClick={() => handleDetailsClick(product._id)}
+              >
+                التفاصيل
+              </button>
             </div>
           </div>
         ))}

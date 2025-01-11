@@ -1,21 +1,19 @@
 import { useState, useEffect } from 'react'
-import './Dry.css'
+import '../Dry/Dry.css'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
 
-const Dry = () => {
-  const [drySweets, setDrySweets] = useState([]);
+const OrientalSweets = () => {
+  const [orientalSweets, setOrientalSweets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchDrySweets = async () => {
+    const fetchOrientalSweets = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:4000/api/product/list?category=Dry');
+        const response = await axios.get('http://localhost:4000/api/product/list?category=Oriental');
         if (response.data.success) {
-          setDrySweets(response.data.products);
+          setOrientalSweets(response.data.products);
         } else {
           setError('Failed to fetch products');
         }
@@ -26,29 +24,29 @@ const Dry = () => {
       }
     };
 
-    fetchDrySweets();
+    fetchOrientalSweets();
   }, []);
 
   const handleDetailsClick = (productId) => {
-    navigate(`/product/${productId}`);
+    // يمكنك إضافة التوجيه إلى صفحة التفاصيل هنا
+    console.log('View details for product:', productId);
   };
 
   if (loading) return <div className="loading">جاري التحميل...</div>;
   if (error) return <div className="error">{error}</div>;
-  if (!drySweets.length) return <div>لا توجد منتجات في هذه الفئة</div>;
 
   return (
     <div className="dry-container">
       <div className="dry-grid">
-        {drySweets.map((product) => (
+        {orientalSweets.map((product) => (
           <div key={product._id} className="product-card">
             <img 
-              src={product.image[0]} 
+              src={product.image} 
               alt={product.name} 
               className="product-image"
             />
             <h3 className="product-name">{product.name}</h3>
-            <p className="product-price">{product.price} جنيه</p>
+            <p className="product-price">{product.price.toFixed(2)} ج.م</p>
             <div className="product-actions">
               <button 
                 className="details-button"
@@ -64,4 +62,4 @@ const Dry = () => {
   );
 };
 
-export default Dry;
+export default OrientalSweets;
